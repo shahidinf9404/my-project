@@ -125,22 +125,6 @@
                     <div class="control">
                         <button class="button is-primary is-fullwidth" type="submit" id="submit-button">Hantar</button>
                     </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column is-full">
-                <div class="field">
-                    <label class="label" for="kuantiti">KUANTITI:<span class="required">*</span></label>
-                    <div class="control">
-                        <input class="input" id="kuantiti" type="number" placeholder="" name="KUANTITI" required oninvalid="setCustomValidity('Sila isi bahagian ini')" oninput="setCustomValidity('')" />
-                    </div>
-                </div>
-            </div>
-            <div class="column is-full">
-                <div class="field is-grouped">
-                    <div class="control">
-                        <button class="button is-primary is-fullwidth" type="submit" id="submit-button">Hantar</button>
-                    </div>
                 </div>
             </div>
         </div>
