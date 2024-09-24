@@ -78,38 +78,36 @@
                     </div>
                 </div>
             </div>
-            <div class="column is-full">
-                <div class="field">
-                    <label class="label">WAKTU:<span class="required">*</span></label>
-                    <div class="control" style="display: flex; gap: 1rem;">
-                        <div>
-                            <b><label for="timeStart">MULA:</label></b>
-                            <input 
-                                class="input" 
-                                id="WAKTU MULA" 
-                                onblur="mycapitalized()" 
-                                type="time" 
-                                name="WAKTU MULA" 
-                                required 
-                                oninvalid="setCustomValidity('Sila isi bahagian ini')" 
-                                oninput="setCustomValidity('')" />
-                        </div>
-                        <div>
-                            <b><label for="timeEnd">SELESAI:</label></b>
-                            <input 
-                                class="input" 
-                                id="WAKTU SELESAI" 
-                                onblur="mycapitalized()" 
-                                type="time" 
-                                name="WAKTU SELESAI" 
-                                required 
-                                oninvalid="setCustomValidity('Sila isi bahagian ini')" 
-                                oninput="setCustomValidity('')" />
-                        </div>
-                    </div>
+
+        <div class="column is-full">
+            <div class="field">
+                <label class="label">WAKTU:<span class="required">*</span></label>
+                <div class="control" style="display: flex; align-items: center; gap: 1rem;">
+                    <input 
+                        class="input" 
+                        id="WAKTU MULA" 
+                        type="time" 
+                        name="WAKTU MULA" 
+                        required 
+                        style="width: 120px;" 
+                        oninvalid="setCustomValidity('Sila isi bahagian ini')" 
+                        oninput="setCustomValidity('')" />
+        
+                    <label class="label" style="font-weight: bold; margin: 0;">HINGGA</label>
+                    
+                    <input 
+                        class="input" 
+                        id="WAKTU SELESAI" 
+                        type="time" 
+                        name="WAKTU SELESAI" 
+                        required 
+                        style="width: 120px;" 
+                        oninvalid="setCustomValidity('Sila isi bahagian ini')" 
+                        oninput="setCustomValidity('')" />
                 </div>
             </div>
-            
+        </div>
+
             <div class="column is-full">
                 <div class="field">
                     <label class="label">TUJUAN:<span class="required">*</span></label>
