@@ -2,37 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Template with Sections</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        main {
+            padding: 20px;
+            min-height: 80vh; /* Ensure main has some height */
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Website Header</h1>
+</header>
+
+<main>
+    <section>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
     <style>
         span[class="required"] {
             color: #ad012c;
         }
         img {
-            width: 100px; /* Adjusted for better mobile view */
+            width: 150px;
         }
         div[class="hero-body"] {
             background-color: rgb(211, 211, 211);
         }
         body {
             background-color: rgb(211, 211, 211);
-            padding: 20px; /* Reduced padding for smaller screens */
+            padding: 50px;
             outline: 3px dashed #000000;
             box-shadow: 5px 5px 10px black;
             outline-offset: -30px;
         }
         h4 {
             -webkit-text-fill-color: black;
-            font-size: 1.5rem; /* Responsive font size */
         }
-        @media (min-width: 768px) {
+       @media (min-width: 768px) {
             body {
-                padding: 50px; /* Maintain larger padding on wider screens */
+                padding: 50px;
             }
             img {
-                width: 150px; /* Original size for larger screens */
+                width: 150px;
             }
-        }
+        } 
     </style>
 </head>
 <body>
@@ -80,34 +127,34 @@
                 </div>
             </div>
 
-            <div class="column is-full">
-                <div class="field">
-                    <label class="label">WAKTU:<span class="required">*</span></label>
-                    <div class="control" style="display: flex; align-items: center; gap: 1rem;">
-                        <input 
-                            class="input" 
-                            id="WAKTU MULA" 
-                            type="time" 
-                            name="WAKTU MULA" 
-                            required 
-                            style="width: 100px;" 
-                            oninvalid="setCustomValidity('Sila isi bahagian ini')" 
-                            oninput="setCustomValidity('')" />
-            
-                        <label class="label" style="font-weight: bold; margin: 0;">HINGGA</label>
-                        
-                        <input 
-                            class="input" 
-                            id="WAKTU SELESAI" 
-                            type="time" 
-                            name="WAKTU SELESAI" 
-                            required 
-                            style="width: 100px;" 
-                            oninvalid="setCustomValidity('Sila isi bahagian ini')" 
-                            oninput="setCustomValidity('')" />
-                    </div>
+        <div class="column is-full">
+            <div class="field">
+                <label class="label">WAKTU:<span class="required">*</span></label>
+                <div class="control" style="display: flex; align-items: center; gap: 1rem;">
+                    <input 
+                        class="input" 
+                        id="WAKTU MULA" 
+                        type="time" 
+                        name="WAKTU MULA" 
+                        required 
+                        style="width: 120px;" 
+                        oninvalid="setCustomValidity('Sila isi bahagian ini')" 
+                        oninput="setCustomValidity('')" />
+        
+                    <label class="label" style="font-weight: bold; margin: 0;">HINGGA</label>
+                    
+                    <input 
+                        class="input" 
+                        id="WAKTU SELESAI" 
+                        type="time" 
+                        name="WAKTU SELESAI" 
+                        required 
+                        style="width: 120px;" 
+                        oninvalid="setCustomValidity('Sila isi bahagian ini')" 
+                        oninput="setCustomValidity('')" />
                 </div>
             </div>
+        </div>
 
             <div class="column is-full">
                 <div class="field">
@@ -119,7 +166,8 @@
                                 id="TUJUAN" 
                                 required 
                                 oninvalid="setCustomValidity('Sila isi bahagian ini')" 
-                                oninput="setCustomValidity('')">
+                                oninput="setCustomValidity('')"
+                            >
                                 <option value="" disabled selected>PILIH TUJUAN</option>
                                 <option value="TEMPAHAN BILIK MESYUARAT">TEMPAHAN BILIK MESYUARAT</option>
                                 <option value="BAWA KELUAR LAPTOP">BAWA KELUAR LAPTOP</option>
@@ -140,7 +188,16 @@
     </form>
     <div
       id="message"
-      style="display: none; margin: 20px; font-weight: bold; color: green; padding: 8px; background-color: beige; border-radius: 4px; border-color: aquamarine;"
+      style="
+        display: none;
+        margin: 20px;
+        font-weight: bold;
+        color: green;
+        padding: 8px;
+        background-color: beige;
+        border-radius: 4px;
+        border-color: aquamarine;
+      "
     ></div>
 
     <script>
@@ -186,3 +243,70 @@
             document.getElementById("message").style.display = "block";
             document.getElementById("message").style.backgroundColor = "green";
             document.getElementById("message").style.color = "beige";
+            document.getElementById("submit-button").disabled = false;
+            document.getElementById("form").reset();
+
+            setTimeout(function () {
+              document.getElementById("message").textContent = "";
+              document.getElementById("message").style.display = "none";
+            }, 2600);
+          })
+          .catch(function (error) {
+            // Handle errors, you can display an error message here
+            console.error(error);
+            document.getElementById("message").textContent =
+              "An error occurred while submitting the form.";
+            document.getElementById("message").style.display = "block";
+          });
+      });
+    </script>
+    <script>
+      var date = new Date();
+      var tdate = date.getDate();
+      var month = date.getMonth() + 1; //4
+      if(tdate < 10){
+          tdate = '0' +tdate;
+      }
+      if(month < 10){
+          month = "0" + month;
+      }
+      var year = date.getUTCFullYear();
+      var minDate = year + "-" + month + "-" + tdate;
+      document.getElementById("TARIKH").setAttribute('min', minDate)
+      console.log(minDate);
+      </script>
+  
+      <script>
+          function mycapitalized()
+          {
+          var a = document.getElementById("NAMA PEGAWAI")
+          a.value=a.value.toUpperCase();
+          var b = document.getElementById("UNIT/ BAHAGIAN")
+          b.value=b.value.toUpperCase();
+          var c = document.getElementById("TAJUK MESYUARAT")
+          c.value=c.value.toUpperCase();        
+           }      
+      </script>
+  
+  </body>
+</html>
+
+    </section>
+    
+    <section>
+        <h2>Section 2: Features</h2>
+        <p>This section highlights the key features and offerings of the website.</p>
+    </section>
+    
+    <section>
+        <h2>Section 3: Contact Information</h2>
+        <p>This section contains contact information and how to reach out.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
