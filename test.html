@@ -2,36 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
     <style>
         span[class="required"] {
             color: #ad012c;
         }
         img {
-            width: 150px;
+            width: 100px; /* Adjusted for better mobile view */
         }
         div[class="hero-body"] {
             background-color: rgb(211, 211, 211);
         }
         body {
             background-color: rgb(211, 211, 211);
-            padding: 50px;
+            padding: 20px; /* Reduced padding for smaller screens */
             outline: 3px dashed #000000;
             box-shadow: 5px 5px 10px black;
             outline-offset: -30px;
         }
         h4 {
             -webkit-text-fill-color: black;
+            font-size: 1.5rem; /* Responsive font size */
         }
-       @media (min-width: 768px) {
+        @media (min-width: 768px) {
             body {
-                padding: 50px;
+                padding: 50px; /* Maintain larger padding on wider screens */
             }
             img {
-                width: 150px;
+                width: 150px; /* Original size for larger screens */
             }
-        } 
+        }
     </style>
 </head>
 <body>
@@ -79,34 +80,34 @@
                 </div>
             </div>
 
-        <div class="column is-full">
-            <div class="field">
-                <label class="label">WAKTU:<span class="required">*</span></label>
-                <div class="control" style="display: flex; align-items: center; gap: 1rem;">
-                    <input 
-                        class="input" 
-                        id="WAKTU MULA" 
-                        type="time" 
-                        name="WAKTU MULA" 
-                        required 
-                        style="width: 120px;" 
-                        oninvalid="setCustomValidity('Sila isi bahagian ini')" 
-                        oninput="setCustomValidity('')" />
-        
-                    <label class="label" style="font-weight: bold; margin: 0;">HINGGA</label>
-                    
-                    <input 
-                        class="input" 
-                        id="WAKTU SELESAI" 
-                        type="time" 
-                        name="WAKTU SELESAI" 
-                        required 
-                        style="width: 120px;" 
-                        oninvalid="setCustomValidity('Sila isi bahagian ini')" 
-                        oninput="setCustomValidity('')" />
+            <div class="column is-full">
+                <div class="field">
+                    <label class="label">WAKTU:<span class="required">*</span></label>
+                    <div class="control" style="display: flex; align-items: center; gap: 1rem;">
+                        <input 
+                            class="input" 
+                            id="WAKTU MULA" 
+                            type="time" 
+                            name="WAKTU MULA" 
+                            required 
+                            style="width: 100px;" 
+                            oninvalid="setCustomValidity('Sila isi bahagian ini')" 
+                            oninput="setCustomValidity('')" />
+            
+                        <label class="label" style="font-weight: bold; margin: 0;">HINGGA</label>
+                        
+                        <input 
+                            class="input" 
+                            id="WAKTU SELESAI" 
+                            type="time" 
+                            name="WAKTU SELESAI" 
+                            required 
+                            style="width: 100px;" 
+                            oninvalid="setCustomValidity('Sila isi bahagian ini')" 
+                            oninput="setCustomValidity('')" />
+                    </div>
                 </div>
             </div>
-        </div>
 
             <div class="column is-full">
                 <div class="field">
@@ -118,8 +119,7 @@
                                 id="TUJUAN" 
                                 required 
                                 oninvalid="setCustomValidity('Sila isi bahagian ini')" 
-                                oninput="setCustomValidity('')"
-                            >
+                                oninput="setCustomValidity('')">
                                 <option value="" disabled selected>PILIH TUJUAN</option>
                                 <option value="TEMPAHAN BILIK MESYUARAT">TEMPAHAN BILIK MESYUARAT</option>
                                 <option value="BAWA KELUAR LAPTOP">BAWA KELUAR LAPTOP</option>
@@ -186,4 +186,3 @@
             document.getElementById("message").style.display = "block";
             document.getElementById("message").style.backgroundColor = "green";
             document.getElementById("message").style.color = "beige";
-            document.getElementById("submit-button").disabled =
