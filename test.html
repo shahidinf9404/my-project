@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Desktop View</title>
+    <script>
+        // Check if the cookie is set for desktop view
+        if (document.cookie.indexOf('desktop=true') === -1 && window.innerWidth < 1024) {
+            // Redirect to the desktop version
+            window.location.href = "https://sites.google.com/moh.gov.my/cenderamatabdha/halaman-utama";
+        }
+
+        // Function to switch to desktop view and set a cookie
+        function switchToDesktop() {
+            document.cookie = "desktop=true; path=/";
+            window.location.href = "https://sites.google.com/moh.gov.my/cenderamatabdha/halaman-utama";
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Mobile Site</h1>
+    <p>If you would like to view the desktop version, click the button below:</p>
+    <button onclick="switchToDesktop()">View Desktop Site</button>
+</body>
+</html>
