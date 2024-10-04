@@ -191,7 +191,7 @@
           .then(function (data) {
             // Display a success message
             document.getElementById("message").textContent =
-              "BORANG BERJAYA DIHANTAR!";
+              "BORANG ANDA TELAH BERJAYA DIHANTAR. SILA REFRESH HALAMAN UNTUK MELIHAT TEMPAHAN DALAM JADUAL TEMPAHAN";
             document.getElementById("message").style.display = "block";
             document.getElementById("message").style.backgroundColor = "green";
             document.getElementById("message").style.color = "beige";
@@ -207,7 +207,7 @@
             // Handle errors, you can display an error message here
             console.error(error);
             document.getElementById("message").textContent =
-              "An error occurred while submitting the form.";
+              "SILA SEMAK SEMULA TEMPAHAN MASA DAN TARIKH YANG TELAH DIMASUKAN";
             document.getElementById("message").style.display = "block";
           });
       });
