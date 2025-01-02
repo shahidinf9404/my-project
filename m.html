@@ -56,6 +56,14 @@
             </div>
             <div class="column is-full">
                 <div class="field">
+                    <label class="label">EMEL:<span class="required">*</span></label>
+                    <div class="control">
+                        <input class="input" id="EMEL" onblur="mycapitalized()" type="text" placeholder="@moh.gov.my" name="EMEL" required oninvalid="setCustomValidity('Sila isi bahagian ini')" oninput="setCustomValidity('')" />
+                    </div>
+                </div>
+            </div>
+            <div class="column is-full">
+                <div class="field">
                     <label class="label">UNIT/ CAWANGAN:<span class="required">*</span></label>
                     <div class="control">
                         <input class="input" id="UNIT/ CAWANGAN" onblur="mycapitalized()" type="text" placeholder="e.g. Unit A" name="UNIT/ CAWANGAN" required oninvalid="setCustomValidity('Sila isi bahagian ini')" oninput="setCustomValidity('')" />
