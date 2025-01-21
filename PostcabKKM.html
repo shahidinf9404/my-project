@@ -29,6 +29,28 @@
             pointer-events: none; /* Pastikan watermark tidak mengganggu interaksi pengguna */
         }
     
+        /* Tajuk Styling */
+         h1 {
+        top: 0;
+        background-color: #ffffff;
+        padding: 20px 0;
+        margin: 0;
+        font-size: 28px;
+        text-align: left;
+        z-index: 10;
+        width: 100%; /* Pastikan tajuk menggunakan ruang penuh */
+        }
+
+        /* Kotak Carian */
+        input[type="text"] {
+        margin-bottom: 20px;
+        padding: 12px 20px;
+        width: 100%; /* Pastikan input mengisi seluruh lebar */
+        font-size: 18px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+         }
+
         /* Table Styling */
         table {
             width: 100%;
@@ -58,9 +80,14 @@
         /* Responsive design */
         @media (max-width: 768px) {
             body {
-                margin: 100px;
+                margin: 10px;
             }
-    
+
+            h1 {
+            font-size: 24px; /* Mengurangkan saiz fon pada peranti mudah alih */
+            padding: 18px 0;
+            }
+
             input[type="text"] {
                 padding: 10px;
                 font-size: 16px; /* Menambah saiz fon pada input supaya mudah digunakan di telefon */
@@ -78,9 +105,13 @@
     
         @media (max-width: 480px) {
             body {
-                margin: 50px;
+                margin: 5px;
             }
     
+            h1 {
+            font-size: 20px; /* Saiz fon lebih kecil untuk peranti kecil */
+            padding: 12px 0;
+            }
             input[type="text"] {
                 padding: 12px;
                 font-size: 14px;
@@ -939,7 +970,7 @@ Tarikh Bersara : -</td>
       <br>
       <br>
       <h2>AGENSI YANG MERUPAKAN AHLI POSTCAB (hanya utk rujukan dan edaran surat berkaitan)</h2>
-<table>   
+      <table id="dataTable">   
       <thead>
               <tr>
                   <th>No.</th>
