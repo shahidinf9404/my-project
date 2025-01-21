@@ -47,7 +47,7 @@
         background-color: #ffffff;
         padding: 20px 0;
         margin: 0;
-        font-size: 28px;
+        font-size: 20px;
         text-align: left;
         z-index: 10;
         width: 100%; /* Pastikan tajuk menggunakan ruang penuh */
@@ -89,7 +89,55 @@
             box-sizing: border-box; /* Pastikan padding tidak mengubah lebar input */
         }
     
-        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                margin: 10px;
+            }
+
+            h1 {
+            font-size: 24px; /* Mengurangkan saiz fon pada peranti mudah alih */
+            padding: 18px 0;
+            }
+
+            input[type="text"] {
+                padding: 10px;
+                font-size: 16px; /* Menambah saiz fon pada input supaya mudah digunakan di telefon */
+            }
+    
+            th, td {
+                padding: 10px;
+            }
+    
+            table {
+                margin-top: 10px;
+                font-size: 14px; /* Mengurangkan saiz fon untuk skrin kecil */
+            }
+        }
+    
+        @media (max-width: 480px) {
+            body {
+                margin: 5px;
+            }
+    
+            h1 {
+            font-size: 20px; /* Saiz fon lebih kecil untuk peranti kecil */
+            padding: 12px 0;
+            }
+            input[type="text"] {
+                padding: 12px;
+                font-size: 14px;
+            }
+    
+            th, td {
+                padding: 8px;
+                font-size: 12px; /* Mengurangkan saiz fon lebih kecil untuk peranti lebih kecil */
+            }
+    
+            table {
+                font-size: 12px;
+            }
+        }
     </style>    
 </head>
 <body>
